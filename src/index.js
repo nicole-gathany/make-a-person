@@ -32,8 +32,13 @@ var Person = function(firstAndLast) {
     return nameArr[1];
   };
   // bob.getFullName() should return "Haskell Ross" after bob.setFirstName("Haskell").
-  this.setFirstName = function(name) {
-    nameArr[0] = name;
+  this.setFirstName = function(firstName) {
+    nameArr[0] = firstName;
+    return nameArr.join(" ");
+  };
+  // bob.getFullName() should return "Haskell Curry" after bob.setLastName("Curry")
+  this.setLastName = function(lastName) {
+    nameArr[1] = lastName;
     return nameArr.join(" ");
   };
 };
@@ -43,3 +48,4 @@ console.log(bob.getFullName());
 console.log(bob.getFirstName());
 console.log(bob.getLastName());
 console.log(bob.setFirstName("Hi"));
+console.log(bob.setLastName("Man"));
