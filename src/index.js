@@ -31,9 +31,15 @@ var Person = function(firstAndLast) {
   this.getLastName = function() {
     return nameArr[1];
   };
+  // bob.getFullName() should return "Haskell Ross" after bob.setFirstName("Haskell").
+  this.setFirstName = function(name) {
+    nameArr[0] = name;
+    return nameArr.join(" ");
+  };
 };
 
 var bob = new Person("Bob Ross");
 console.log(bob.getFullName());
 console.log(bob.getFirstName());
 console.log(bob.getLastName());
+console.log(bob.setFirstName("Hi"));
