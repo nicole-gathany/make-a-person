@@ -44,6 +44,9 @@ var Person = function(firstAndLast) {
   // bob.getFullName() should return "Haskell Curry" after bob.setFullName("Haskell Curry").
   this.setFullName = function(fullName) {
     firstAndLast = fullName;
+    let newNameArr = fullName.split(" ");
+    nameArr[0] = newNameArr[0];
+    nameArr[1] = newNameArr[1];
   };
 };
 
